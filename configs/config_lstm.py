@@ -1,0 +1,32 @@
+import torch
+
+device = 'cuda'
+seed = 1234
+fold = 1
+epochs = 20
+start = 0
+test_batchsize = 128
+batchsize = 128
+size = 256
+hflip = True  # Augmentation - Embedding horizontal flip
+transpose = True
+autocrop = True
+infer = 'TRN'
+n_classes = 6
+val = False
+n_gpu = torch.cuda.device_count()
+dataset = '/media/ps/_data1/ICH/ich-master/dataset/'
+rootpath = "/media/ps/_data1/ICH/ich-master/"
+workpath = "/media/ps/_data1/ICH/ich-master/experiment/r50+d121+bce+1.5*(l1+l2)/lstm/"
+embpath = "/media/ps/_data1/ICH/ich-master/experiment/r50+d121+bce+1.5*(l1+l2)/emb/"
+model_save_path = "/media/ps/_data1/ICH/ich-master/experiment/r50+d121+bce+1.5*(l1+l2)/lstm/"
+weightsname = "lstm"
+lr = 0.00005  # 0.00001
+dropout = 0.2
+decay = 0
+lrgamma = 0.75
+lstm_units = 2048
+label_cols = ['any', 'epidural', 'intraparenchymal', 'intraventricular', 'subarachnoid', 'subdural']
+lstm_model = 'BiLSTM'
+lstm_loss = 'bce'
+cnnmodel = 'cbp'
